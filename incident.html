@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anomaly Reports | Skyroot Defence Systems</title> 
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/incident.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="Skyroot Defence Logo">
+        <h1>Skyroot Defence Systems</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="incident.html" class="active">Incident</a></li> 
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="founders.html">Founders</a></li>
+            <li><a href="platform.html">Platform</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<section class="incident-hero">
+  <img src="images/parashute-crash.jpg" alt="Incident Background" class="incident-bg-image">
+  <div class="overlay"></div>
+  <div class="incident-content">
+    <h2>Operational Deviation Summary</h2>
+    <p>
+      This is a secure portal for accessing audited operational and incident data from Skyroot's platforms.
+    </p>
+  </div>
+</section>
+
+
+<section class="stats-section fade-in">
+    <h3>System Reliability Metrics (Last 12 Months)</h3>
+    <div class="stats-container">
+        <div class="stat-box">
+            <span class="stat-number">99.98%</span>
+            <p class="stat-label">Parachute Deployment Success Rate</p>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">0.02%</span>
+            <p class="stat-label">Anomaly Occurrence Rate</p>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">Tier 1</span>
+            <p class="stat-label">System Integrity Rating</p>
+        </div>
+    </div>
+
+    <div class="system-chart-container">
+        <div class="chart-item">
+            <span class="chart-label">Deployment Success</span>
+            <div class="chart-bar-container">
+                <div class="chart-bar success" style="width: 99.98%;"></div>
+            </div>
+            <span class="chart-value">99.98%</span>
+        </div>
+        <div class="chart-item">
+            <span class="chart-label">Anomaly Rate</span>
+            <div class="chart-bar-container">
+                <div class="chart-bar anomaly" style="width: 0.02%;"></div>
+            </div>
+            <span class="chart-value">0.02%</span>
+        </div>
+        <div class="chart-item">
+            <span class="chart-label">Unresolved Issues</span>
+            <div class="chart-bar-container">
+                <div class="chart-bar issues" style="width: 5%;"></div>
+            </div>
+            <span class="chart-value">5%</span>
+        </div>
+    </div>
+</section>
+
+<!-- ==============================
+     LATEST INCIDENT REPORT
+=================================-->
+<section class="anomaly-report-section fade-in">
+    <h3>Latest Anomaly: Parachute Jump Incident – Agra Airbase</h3>
+    <div class="report-container">
+        <div class="report-visual">
+            <img src="images\incident.jpg" alt="Agra Parachute Jump Incident">
+        </div>
+        <div class="report-summary">
+            <h4>Report ID: ANOM-AF-250405</h4>
+            <p class="date">Date: 2025-04-05 | System: Parachute Demo Drop – IAF Akash Ganga Unit</p>
+            <div class="log-details">
+                <p><strong>Incident Summary:</strong> 
+                    During a scheduled demonstration jump in Agra, a Para Jump Instructor from the IAF’s 
+                    Akash Ganga Skydiving Team sustained critical injuries after a hard landing. Despite 
+                    successful canopy deployment, the instructor succumbed to injuries during medical care.
+                </p>
+                <p><strong>Cause Analysis:</strong> 
+                    Preliminary findings suggest aerodynamic instability induced by crosswind shear 
+                    during descent. The parachute deployed correctly, but control input response was 
+                    delayed due to minor line twist during flare phase.
+                </p>
+                <p><strong>Action Taken:</strong> 
+                    Immediate suspension of all demonstration jumps pending safety audit. 
+                    Wind condition monitoring protocol has been updated to include real-time 
+                    telemetry feedback and auto-abort thresholds for drop-zone gust speeds above 22 knots.
+                </p>
+                <p><strong>Impact:</strong> 
+                    No civilian or equipment loss reported. Internal review committee initiated 
+                    a detailed technical and procedural audit to enhance safety redundancy for future training ops.
+                </p>
+                <a href="#" class="btn-download">Download Full Report (Secure Access)</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==============================
+     PREVIOUS INCIDENT REPORT
+=================================-->
+<section class="anomaly-report-section fade-in">
+    <h3>Previous Anomaly: VayuNet Telemetry Failure</h3>
+    <div class="report-container">
+        <div class="report-visual">
+            <img src="images\images.jpg" alt="VayuNet Telemetry Failure Diagram">
+        </div>
+        <div class="report-summary">
+            <h4>Report ID: ANOM-VN-250329</h4>
+            <p class="date">Date: 2025-03-29 | System: VayuNet Module T4</p>
+            <div class="log-details">
+                <p><strong>Incident Summary:</strong> 
+                    During a high-G maneuver simulation, the primary telemetry link experienced signal degradation, 
+                    resulting in a 4.5-second data outage. Backup systems maintained GPS and altitude tracking.
+                </p>
+                <p><strong>Failure Cause Analysis:</strong> 
+                    Root cause traced to a transient 20ms power spike in the RF unit due to an unshielded capacitor 
+                    on the power bus. Confirmed to be a hardware, not software, anomaly.
+                </p>
+                <p><strong>Action Taken:</strong> 
+                    All operational modules received immediate hardware revision (Rev 1.1) with improved shielding 
+                    and power regulation. No mission loss recorded.
+                </p>
+                <a href="#" class="btn-download">Download Full Log Report (Secure)</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Skyroot Defence Systems | Innovating Indian Aerospace</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

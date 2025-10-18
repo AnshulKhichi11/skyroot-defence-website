@@ -1,0 +1,455 @@
+/* ======================================
+   SKYROOT DEFENCE — INCIDENT PAGE (Cinematic Modern Layout)
+   Inspired by project.css for consistency
+====================================== */
+
+
+
+/* --------------------------------------
+   HERO SECTION (Fullscreen with Slide Animation)
+-------------------------------------- */
+.incident-hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.incident-bg-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(55%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+
+/* Slide-up effect */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.incident-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  padding: 0 5%;
+  animation: slideUp 1.2s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.incident-content h2 {
+  font-size: 3.8rem; /* Larger, more impactful heading */
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500; /* Bolder for impact */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+}
+
+.incident-content p {
+   font-size: 1.25rem; /* Larger paragraph */
+    color: #e0e0e0;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* --------------------------------------
+   STATS SECTION (Animated Progress Look)
+-------------------------------------- */
+.stats-section {
+  width: 100%;
+  padding: 100px 30px 2%;
+  background: #000;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  scroll-snap-align: start;
+}
+
+.stats-section h3 {
+  text-transform: uppercase;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-box {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  text-transform: uppercase;
+  color: #a0a0a0;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+
+/* --------------------------------------
+   BAR CHART (Animated)
+-------------------------------------- */
+.system-chart-container {
+  width: 100%;
+  padding: 100px 10px 1%;
+  background-color: #0a0a0a;
+}
+
+.chart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  animation: slideUp 1s ease-out;
+}
+
+.chart-label {
+  flex-basis: 25%;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.chart-bar-container {
+  flex-grow: 1;
+  height: 8px;
+  background: #111;
+  margin: 10px 20px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.chart-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ddd, #ddd);
+  transition: width 1.2s ease-out;
+}
+
+.chart-value {
+  width: 60px;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* --------------------------------------
+   INCIDENT REPORT SECTIONS
+-------------------------------------- */
+.anomaly-report-section {
+  width: 100%;
+  padding: 100px 0;
+  background: #000;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  scroll-snap-align: start;
+}
+
+.anomaly-report-section h3 {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 80px;
+  font-weight: 600;
+}
+
+.report-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.report-visual {
+  flex: 1;
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.report-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter:  brightness(70%);
+  transition: transform 0.8s ease;
+}
+
+.report-summary {
+  flex: 1;
+  padding: 80px 8%;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  animation: slideUp 1.3s ease-out;
+}
+
+.report-summary h4 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+}
+
+.report-summary .date {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+}
+
+.log-details p {
+  color: #ddd;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.7;
+}
+
+/* Button Style (like project.css link hover) */
+.btn-download {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  color: #ddd;
+  border: 2px solid #ddd;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #ddd;
+  color: #000;
+}
+
+/* --------------------------------------
+   RESPONSIVE OPTIMIZATION
+-------------------------------------- */
+@media (max-width: 900px) {
+  .incident-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .incident-content p{
+    font-size: 0.9rem;
+  }
+
+  .stats-section {
+    padding: 80px 5%;
+  }
+
+  .stats-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+  }
+
+  .stats-container {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .stat-box {
+    flex: 1 1 200px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .chart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .report-container {
+    flex-direction: column;
+  }
+
+  .report-summary {
+    padding: 60px 6%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .btn-download {
+    align-self: center;
+  }
+
+  .report-visual {
+    height: 280px;
+  }
+
+  .system-chart-container {
+    padding: 80px 6%;
+  }
+
+  .chart-item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .chart-label {
+    flex-basis: 30%;
+    font-size: 0.9rem;
+  }
+
+  .chart-bar-container {
+    flex-grow: 1;
+    height: 8px;
+  }
+
+  .chart-value {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .anomaly-report-section {
+  padding: 15px 0;
+}
+
+.anomaly-report-section h3 {
+  font-size: clamp(1.2rem, 0.5vw, 0.8rem);
+  margin-bottom: 30px;
+}
+  .incident-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .stats-section {
+    padding: 10px 1%;
+  }
+
+  .stats-section h3 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .stat-box {
+    flex: 1 1 100%;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-download {
+    font-size: 0.8rem;
+    padding: 10px 22px;
+  }
+  .system-chart-container {
+    padding: 10px 5%;
+  }
+
+  .chart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 10px;
+  }
+
+  .chart-label {
+    flex-basis: 100%;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .chart-bar-container {
+    width: 100%;
+    height: 6px;
+    margin: 6px 0;
+  }
+
+  .chart-value {
+    width: auto;
+    text-align: left;
+    font-size: 0.8rem;
+    margin-top: 6px;
+    color: #e0e0e0;
+  }
+
+  .chart-bar {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #dcdcdc, #ffffff);
+  }
+}

@@ -1,0 +1,191 @@
+/* ======================================
+    FOUNDERS SECTION STYLES (Full-Screen, Simple, Professional)
+====================================== */
+.founders-section {
+    /* Removed horizontal padding here to allow profiles to go edge-to-edge */
+    padding: 120px 0; 
+    text-align: center;
+    background-color: #0e0e0e; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.founders-section h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    /* Add padding for top content */
+    padding: 0 5%; 
+}
+
+.founders-intro {
+    max-width: 850px; /* Keep introductory text centered and readable */
+    margin: 0 auto 80px; 
+    color: #a0a0a0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    /* Add padding for top content */
+    padding: 0 5%;
+}
+
+/* --- Founder Profile Block --- */
+.founder-profile {
+    /* FULL WIDTH - max-width removed */
+    display: flex;
+    align-items: center; 
+    width: 100%; /* Ensure it spans full width */
+    margin: 40px auto; 
+    text-align: left;
+    background-color: #0e0e0e; 
+    overflow: hidden;
+}
+
+/* Separator for clean division between profiles (Full Width) */
+.profile-separator {
+    /* FULL WIDTH - max-width removed */
+    width: 90%; /* Use 90% width to keep it slightly inset */
+    margin: 80px auto;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Alternating layout (maintain image/text swap) */
+.founder-profile.reverse {
+    flex-direction: row-reverse;
+}
+
+.profile-image {
+    flex: 0 0 35%; /* Image takes a fixed 35% of width */
+    overflow: hidden;
+    height: 400px; /* Keep height fixed */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%; /* Use 100% of parent container height */
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%) brightness(80%) contrast(1.1); 
+    transition: filter 0.5s ease;
+}
+
+.founder-profile:hover .profile-image img {
+    filter: grayscale(0%) brightness(90%) contrast(1); 
+}
+
+.profile-details {
+    flex: 1; /* Details take the remaining 65% space */
+    padding: 60px 5%; /* Use percentage padding for full-screen spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-details h3 {
+    color: #fff;
+    font-size: 2.5rem; 
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.profile-details h4 {
+    color: #0A66C2; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.profile-details p {
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 1.1rem; 
+}
+
+/* LinkedIn Link Styling */
+.linkedin-link {
+    display:inline-flex;
+    align-items:center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.linkedin-text {
+    color: #0A66C2;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover .linkedin-text {
+    color: #3897f0; 
+}
+
+
+.profile-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-link:hover {
+    color: #a0a0a0;
+    border-color: #a0a0a0;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) {
+    .profile-image {
+        flex: 0 0 40%; 
+        height: 350px;
+    }
+    .profile-details {
+        padding: 40px 3%; /* Reduced side padding on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .founders-section h2, .founders-intro {
+        padding: 0 3%; /* Adjust top content padding for smaller screens */
+    }
+
+    .founder-profile, .founder-profile.reverse {
+        flex-direction: column; /* Stacks vertically on mobile */
+        margin-bottom: 0;
+    }
+
+    .profile-image, .profile-details {
+        max-width: 100%;
+        width: 100%;
+        text-align: center; /* Center text on mobile */
+    }
+    
+    .profile-separator {
+        margin: 60px auto;
+        width: 94%; /* Make separator slightly wider */
+    }
+
+    .profile-image {
+        height: 300px;
+    }
+    
+    .profile-details {
+        padding: 30px 20px;
+        align-items: center;
+    }
+    
+    .profile-link, .linkedin-link {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

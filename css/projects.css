@@ -1,0 +1,325 @@
+/* ======================================
+    PROJECTS HERO SECTION (Top Banner with Video)
+====================================== */
+.project-hero {
+    /* CRITICAL: Fills the entire screen, precisely subtracting the fixed navbar height */
+    height: calc(100vh); 
+    
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%; 
+    position: relative; 
+    overflow: hidden; 
+    
+    /* Used for the smooth scroll-snapping effect if you enabled it on the body/main container */
+    scroll-snap-align: start; 
+}
+.project-bg-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(100%); /* Darkens image for contrast */
+}
+
+/* --------------------------------------
+    SLIDE-UP EFFECT CSS
+-------------------------------------- */
+
+/* Keyframe for the slide-in animation */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start 30px below center */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at its normal position */
+    }
+}
+
+.project-hero .hero-content {
+    z-index: 3;
+    position: relative; 
+    max-width: 900px;
+    
+    /* Apply the animation on load */
+    animation: slideUp 1s ease-out 0.3s forwards; /* 1s duration, 0.3s delay, retains final state */
+    
+    /* Initial state before animation starts (ensures content is hidden) */
+    opacity: 0; 
+}
+
+.project-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Additional, subtle overlay */
+    z-index: 2;
+}
+
+.project-hero .hero-content {
+    z-index: 3;
+    position: relative; 
+    max-width: 900px; /* Constrain content width */
+}
+
+.project-hero .hero-content h2 {
+    font-size: 3.8rem; /* Larger, more impactful heading */
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500; /* Bolder for impact */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Subtle glow */
+}
+
+.project-hero .hero-content p {
+    font-size: 1.25rem; /* Larger paragraph */
+    color: #e0e0e0;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 300; /* Lighter for elegance */
+}
+
+
+/* ======================================
+    TECHNOLOGY FEATURE SECTIONS (Alternating Full-Viewport Video/Text Blocks)
+====================================== */
+.tech-feature {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh; /* Each feature takes full viewport height */
+    max-width: 100%;
+    background-color: #0a0a0a;
+    scroll-snap-align: start; /* Makes each feature a snap point */
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separator */
+}
+
+.tech-feature.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-media {
+    flex: 1.2; /* Slightly wider for the video */
+    overflow: hidden;
+    position: relative;
+    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Divider line */
+}
+
+.tech-feature.reverse .feature-media {
+    border-right: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Background Video Styling */
+.feature-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1; 
+    filter: brightness(90%); /* Darker video for excellent text contrast */
+}
+
+.feature-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Stronger overlay */
+    z-index: 2;
+}
+
+.feature-content {
+    flex: 1; /* Content takes remaining space */
+    padding: 80px 7%; /* Increased padding for spacious feel */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    z-index: 3; /* Ensures content is above all video elements */
+    position: relative; 
+}
+
+.tech-tag {
+    color:  #c0c0c0; /* Cyan accent for tags */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* More spaced out */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-content h3 {
+    color: #fff;
+    font-size: 3.2rem; /* Impactful heading */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 0 0 10px rgba(0, 230, 230, 0.1); /* Subtle glow matching tag */
+}
+
+.feature-content p {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 40px; /* More space before list */
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.feature-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 40px;
+}
+
+.feature-content ul li {
+    color: #c0c0c0;
+    padding-left: 30px; /* More space for custom bullet */
+    margin-bottom: 12px; /* More space between list items */
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.feature-content ul li::before {
+    content: "›"; /* Modern bullet style */
+    color:  #c0c0c0; /* Cyan accent for bullet */
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px; /* Adjust vertical alignment */
+}
+
+.detail-link {
+    color: #c0c0c0; /* Cyan accent for link */
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(0, 230, 230, 0.4); /* Thicker, accented border */
+    transition: color 0.3s ease, border-color 0.3s ease, padding-left 0.3s ease;
+    align-self: flex-start;
+}
+
+.detail-link:hover {
+    color: #fff; /* White on hover */
+    border-color: #fff; /* White border on hover */
+    padding-left: 10px; /* Subtle slide effect */
+}
+
+
+/* ======================================
+    RESPONSIVE ADJUSTMENTS
+====================================== */
+@media (max-width: 1200px) {
+    .project-hero{
+        height: 100vh;
+    }
+    .project-hero .hero-content h2 {
+        font-size: 3rem;
+    }
+    .feature-content h3 {
+        font-size: 2.5rem;
+    }
+    .feature-content {
+        padding: 60px 5%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .project-hero {
+        height: 100vh; /* Shorter hero on tablets */
+    }
+    .project-hero .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    .project-hero .hero-content p {
+        font-size: 1rem;
+    }
+
+    .tech-feature, .tech-feature.reverse {
+        flex-direction: column; /* Stack vertically */
+        min-height: 100vh; /* Still full viewport height on mobile for each section */
+    }
+    
+    .feature-media, .feature-content {
+        flex: none;
+        width: 100%;
+    }
+    
+    .feature-media {
+        min-height: 45vh; /* Media takes 45% of height */
+    }
+    
+    .feature-content {
+        min-height: 55vh; /* Content takes 55% of height */
+        padding: 50px 7%;
+        text-align: center; /* Center text on mobile */
+    }
+    
+    .feature-media {
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .detail-link {
+        align-self: center; /* Center link on mobile */
+    }
+
+    .feature-content h3 {
+        font-size: 2.2rem;
+    }
+    .feature-content p {
+        font-size: 1rem;
+    }
+    .feature-content ul li {
+        text-align: left; /* Keep list items left-aligned */
+        padding-left: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px; /* Constrain list width for readability */
+    }
+}
+
+@media (max-width: 500px) {
+    .project-hero{
+        height: 100vh;
+    }
+    .project-hero .hero-content h2 {
+        font-size: 2rem;
+    }
+    .feature-content h3 {
+        font-size: 1.8rem;
+    }
+    .feature-media {
+        min-height: 40vh;
+    }
+    .feature-content {
+        min-height: 60vh;
+        padding: 40px 5%;
+    }
+}

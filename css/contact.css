@@ -1,0 +1,203 @@
+/* ======================================
+   SKYROOT DEFENCE | CONTACT PAGE
+   Clean, Minimal, SpaceX-style layout
+====================================== */
+
+body {
+  background-color: #000;
+  color: #ddd;
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+.contact-section {
+  width: 100%;
+  padding: 140px 8% 100px;
+  background: #000;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  color: #aaa;
+  max-width: 700px;
+  margin: 0 auto 80px;
+  line-height: 1.7;
+}
+
+/* ---------- FLEX LAYOUT ---------- */
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+}
+
+/* ---------- LEFT SIDE (FORM) ---------- */
+.contact-form-side {
+  flex: 2;
+  text-align: left;
+}
+
+.contact-form-side h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.secure-form .form-group {
+  margin-bottom: 25px;
+}
+
+.secure-form label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.secure-form input,
+.secure-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px 0;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.secure-form input:focus,
+.secure-form textarea:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.secure-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  margin-top: 20px;
+  padding: 14px 0;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* ---------- RIGHT SIDE (INFO) ---------- */
+.contact-info-side {
+  flex: 1.2;
+  text-align: left;
+}
+
+.contact-info-side h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.info-group {
+  margin-bottom: 35px;
+}
+
+.info-group h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.info-group p,
+.info-group a {
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-group a:hover {
+  color: #fff;
+}
+
+/* ---------- SOCIAL LINKS ---------- */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #aaa;
+  margin-right: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  background: #000;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 960px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .contact-info-side,
+  .contact-form-side {
+    width: 100%;
+  }
+
+  .contact-section {
+    padding: 120px 5% 80px;
+  }
+}

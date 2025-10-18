@@ -1,0 +1,211 @@
+/* ======================================
+   SKYROOT DEFENCE – MENTORS PAGE (SPACEX STYLE)
+====================================== */
+
+/* Base Section */
+.founders-section {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.founders-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.founders-intro {
+  color: #a0a0a0;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* ======================================
+   MENTOR FULLSCREEN LAYOUT (SPACEX STYLE)
+====================================== */
+.founder-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  text-align: left;
+}
+
+/* Image Side */
+.profile-image {
+  flex: 1;
+  position: relative;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 0;
+  filter:  brightness(80%) ;
+  transition: all 0.6s ease;
+}
+
+
+/* Text Side */
+.profile-details {
+  flex: 1;
+  padding: 1rem 2rem;
+}
+
+.profile-tag {
+  color: #00bfff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.profile-details h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.profile-details h4 {
+  color: #a0a0a0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.profile-details p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+
+/* Expertise List */
+.mentor-expertise-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2.5rem;
+  border-left: 2px solid rgba(255,255,255,0.1);
+  padding-left: 1.2rem;
+}
+
+.mentor-expertise-list li {
+  color: #a0a0a0;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Links */
+.social-block {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-profile-link span {
+  color: #a0a0a0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.social-profile-link svg path {
+  fill: #a0a0a0 !important;
+  transition: fill 0.3s ease;
+}
+
+.social-profile-link:hover span,
+.social-profile-link:hover svg path {
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+.profile-link {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  transition: 0.3s;
+}
+
+.profile-link:hover {
+  color: #a0a0a0;
+  border-color: #a0a0a0;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+@media (max-width: 1024px) {
+  .founder-profile {
+    text-align: center;
+  }
+
+  .profile-image img {
+    height: 400px;
+  }
+
+  .profile-details {
+    padding: 2rem 1rem;
+  }
+
+  .profile-details p {
+    max-width: 100%;
+  }
+
+  .mentor-expertise-list {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .founders-section h2 {
+    font-size: 2rem;
+  }
+
+  .profile-details h3 {
+    font-size: 2rem;
+  }
+
+  .profile-details h4 {
+    font-size: 1rem;
+  }
+
+  .profile-image img {
+    height: 300px;
+  }
+
+  .founder-profile {
+  display: table-column;
+}
+
+}

@@ -1,0 +1,298 @@
+/* ===========================================
+   SKYROOT DEFENCE — ABOUT PAGE CSS
+   =========================================== */
+
+/* ---------- Reset & Base Styles ---------- */
+
+
+/* ---------- HERO QUOTE SECTION ---------- */
+.about-hero-quote {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.about-hero-quote .quote-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(55%) contrast(115%);
+  transform: scale(1.1);
+  transition: all 2.5s ease;
+}
+
+.about-hero-quote:hover .quote-bg-image {
+  transform: scale(1.2);
+  filter: brightness(60%) contrast(120%);
+}
+
+.about-hero-quote .quote-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 2;
+}
+
+.about-hero-quote .quote-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  padding: 0 20px;
+  opacity: 0;
+  animation: fadeUp 1.8s ease-out forwards;
+}
+
+.about-hero-quote .quote-text {
+  line-height: 1.6;
+  font-weight: 400;
+  color: #f1f1f1;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+  margin-bottom: 25px;
+}
+
+.about-hero-quote .quote-author {
+  font-weight: 500;
+  color: #b4caff;
+  letter-spacing: 1px;
+}
+
+/* ---------- ADDITIONAL ABOUT SECTION ---------- */
+.about-section {
+  width: 100%;
+  background-color: #0b0b0b;
+  padding: 120px 80px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+  opacity: 0.9;
+}
+
+/* ---------- ANIMATION EFFECTS ---------- */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- SCROLL REVEAL EFFECT ---------- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1.2s ease-out;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- STORY & IMAGE SECTION ---------- */
+.story-section {
+  padding: 80px 40px;
+  background-color: #0a0a0a;
+}
+
+.story-container {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  max-width: 1200px;
+}
+
+.story-text {
+  flex: 1;
+  text-align: left;
+}
+
+.story-text h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.story-text p {
+  color: #bdbdbd;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.story-image {
+  flex: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(90%) ;
+  transition: filter 0.5s ease;
+}
+
+.story-image:hover img {
+  filter: brightness(100%) grayscale(0%);
+}
+
+/* ---------- VALUES GRID SECTION ---------- */
+
+.values-section{
+  padding: 20px 40px;
+}
+
+.values-section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.value-card {
+  flex-basis: calc(33.33% - 40px);
+  background-color: transparent;
+  text-align: left;
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+  transition: border-left-color 0.3s ease;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.value-card:hover {
+  border-left-color: #fff;
+}
+
+.value-card h4 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.value-card p {
+  color: #bdbdbd;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+@media (max-width: 1024px) {
+  .about-hero-quote .quote-author {
+    font-size: 1rem;
+  }
+  .about-section {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .story-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .story-text {
+    order: 2;
+    text-align: center;
+  }
+  .story-image {
+    order: 1;
+  }
+  .story-text h3 {
+    font-size: 2rem;
+  }
+  .value-card {
+    flex-basis: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero-quote .quote-author {
+    font-size: 0.8rem;
+  }
+  .about-hero-quote .quote-text {
+    line-height: 1.5;
+  }
+  .about-section {
+    padding: 10px 20px;
+  }
+  .about-section h2 {
+    font-size: 2rem;
+  }
+  .about-section p {
+    font-size: 1rem;
+  }
+  .story-section {
+    padding: 60px 2%;
+  }
+  .story-text h3 {
+    font-size: 1.8rem;
+  }
+  .value-card {
+    flex-basis: 100%;
+    padding: 20px 0 20px 15px;
+    margin-bottom: 20px;
+  }
+}
