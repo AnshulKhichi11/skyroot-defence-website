@@ -65,7 +65,7 @@ body.menu-open {
     text-transform: uppercase;
 }
 .navbar .logo img {
-    width: 40px;
+    width: 100px;
     filter: brightness(100%);
 }
 
@@ -310,7 +310,7 @@ footer {
 /* --- Tablet / Smaller Desktop (Max 992px) --- */
 @media (max-width: 992px) {
     .navbar {
-        padding: 15px 30px; 
+        padding: 15px ; 
         align-items:last baseline;
     }
 
@@ -379,10 +379,10 @@ footer {
 /* --- Small Mobile (Max 500px) --- */
 @media (max-width: 500px) {
     .navbar h1 {
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
     .navbar .logo img {
-        width: 35px;
+        display: none;
     }
     .hero-content h2 {
         font-size: 1.8rem;

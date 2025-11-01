@@ -1,0 +1,196 @@
+/* ======================================
+    TEAM SELECTION PAGE STYLES - FINAL MINIMALIST LIST
+    (Stark Contrast, Simple Layout, Fully Responsive)
+====================================== */
+
+/* --- SECTION CONTAINER --- */
+.team-selection-section {
+    /* Fills the whole screen minus the navbar. */
+    min-height: calc(100vh - 80px); 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 120px 5% 60px; 
+    background-color: #000; 
+}
+
+.selection-content {
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background-color: #0a0a0a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* --- HEADER TEXT --- */
+.selection-header {
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.selection-content h2 {
+    font-size: 3.8rem; /* Larger, more impactful heading */
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500; /* Bolder for impact */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+}
+
+.selection-content .intro-text {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    margin-bottom: 60px;
+    font-weight: 300;
+}
+
+
+/* --- VERTICAL FEATURE LIST STYLES --- */
+.selection-grid { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Strong horizontal divider */
+}
+
+.selection-card { 
+    /* Layout: Text Group (Left) | Arrow (Right) */
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 0; /* Increased vertical padding */
+    background-color: transparent; 
+    position: relative;
+    
+    /* Clean horizontal divider between list items */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Remove bottom border from the very last item */
+.selection-grid .selection-card:last-child {
+    border-bottom: none;
+}
+
+/* On Hover: Minimalist visual feedback */
+
+
+.card-text-group {
+    /* Ensures title and description use most of the space */
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem; 
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+}
+
+.card-description {
+    color: #c0c0c0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- ARROW STYLING (To make the HTML '→' look professional) --- */
+.card-arrow {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.3); /* Subtle light gray */
+    font-weight: 300;
+    
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Arrow Animation on Card Hover */
+.selection-card:hover .card-arrow {
+    transform: translateX(10px); /* Slides right */
+    color: #fff; /* Turns pure white */
+}
+
+
+/* --- RESPONSIVE OPTIMIZATION --- */
+@media (max-width: 900px) {
+    .selection-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    /* Stack on tablet/mobile */
+    .selection-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px 5%; 
+        position: relative; /* Re-establish context for absolute arrow */
+    }
+
+    .card-title, .card-description {
+        flex-basis: 100%;
+        text-align: left;
+        margin-bottom: 5px; 
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+    
+    /* Reposition arrow for stacked layout */
+    .card-arrow {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        transform: none;
+        font-size: 1.8rem;
+    }
+
+    .selection-card:hover {
+        padding-left: 5%; /* Remove the extra padding slide on hover */
+    }
+
+    .selection-card:hover .card-arrow {
+        transform: translateX(5px);
+    }
+}
+
+@media (max-width: 500px) {
+    .selection-content h2 {
+        font-size: 1.8rem;
+    }
+    .selection-card {
+        padding: 15px 5%;
+    }
+    .card-title {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    .card-description {
+        font-size: 0.85rem;
+    }
+    .card-arrow {
+        font-size: 1.5rem;
+    }
+    .team-selection-section {
+    min-height: 100px;
+    text-align: center;
+    padding: 120px 3% 60px;
+}
+}
