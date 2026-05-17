@@ -1,14 +1,36 @@
 /* ======================================
-   SKYROOT DEFENCE — INCIDENT PAGE (Cinematic Modern Layout)
-   Inspired by project.css for consistency
+   KSHITEJ DEFENCE — INCIDENT PAGE
+   Updated: Text-only layout, timeline,
+   fatality stats — fully responsive
 ====================================== */
 
+/* --------------------------------------
+   SHARED SECTION LABELS
+-------------------------------------- */
+.section-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 14px;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
 
+.section-sub {
+  color: #888;
+  font-size: clamp(0.88rem, 2vw, 1rem);
+  max-width: 680px;
+  line-height: 1.7;
+  margin-bottom: 60px;
+}
 
 /* --------------------------------------
-   HERO SECTION (Fullscreen with Slide Animation)
+   HERO — TEXT ONLY (NO IMAGE)
 -------------------------------------- */
-.incident-hero {
+.text-only-hero {
   height: 100vh;
   width: 100%;
   position: relative;
@@ -17,439 +39,632 @@
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  background: #000;
   scroll-snap-align: start;
 }
 
-.incident-bg-image {
+.hero-grid-bg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
   z-index: 1;
-  filter: brightness(55%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 100%);
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 2;
-}
-
-/* Slide-up effect */
 @keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0%   { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .incident-content {
   position: relative;
-  z-index: 3;
-  max-width: 900px;
+  z-index: 2;
+  max-width: 860px;
   padding: 0 5%;
   animation: slideUp 1.2s ease-out 0.3s forwards;
   opacity: 0;
 }
 
+.hero-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 6px 16px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
 .incident-content h2 {
-  font-size: 3.8rem; /* Larger, more impactful heading */
-    color: #fff;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 500; /* Bolder for impact */
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+   font-family: Orbitron;
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 .incident-content p {
-   font-size: 1.25rem; /* Larger paragraph */
-    color: #e0e0e0;
-    max-width: 750px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-weight: 300;
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto 30px;
+   font-family:cursive;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(255,255,255,0.25);
+  margin: 0 auto 24px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  font-size: 0.78rem;
+  color: #666;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-meta .dot {
+  color: #444;
 }
 
 /* --------------------------------------
-   STATS SECTION (Animated Progress Look)
+   STATS SECTION
 -------------------------------------- */
 .stats-section {
   width: 100%;
-  padding: 100px 30px 2%;
+  padding: 100px 6% 60px;
   background: #000;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   scroll-snap-align: start;
-}
-
-.stats-section h3 {
-  text-transform: uppercase;
-  font-size: clamp(1.4rem, 3vw, 1.8rem);
-  letter-spacing: 2px;
-  margin-bottom: 60px;
-  font-weight: 600;
-  color: #fff;
 }
 
 .stats-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 60px;
-  padding: 40px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  gap: 40px;
+  padding: 50px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 60px;
 }
 
 .stat-box {
-  flex: 1 1 250px;
+  flex: 1 1 220px;
   text-align: center;
 }
 
-.stat-number {
+.stat-number_inci {
   display: block;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
   color: #fff;
+  letter-spacing: -0.02em;
 }
 
 .stat-label {
-  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  font-size: clamp(0.72rem, 1.5vw, 0.85rem);
   text-transform: uppercase;
-  color: #a0a0a0;
-  letter-spacing: 1px;
-  margin-top: 8px;
+  color: #666;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
 }
 
-
-/* --------------------------------------
-   BAR CHART (Animated)
--------------------------------------- */
+/* BAR CHART */
 .system-chart-container {
   width: 100%;
-  padding: 100px 10px 1%;
-  background-color: #0a0a0a;
+  padding-top: 20px;
 }
 
 .chart-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-  animation: slideUp 1s ease-out;
+  margin-bottom: 28px;
+  gap: 16px;
+  flex-wrap: nowrap;
 }
 
 .chart-label {
-  flex-basis: 25%;
-  font-size: clamp(0.85rem, 2vw, 1rem);
+  width: 200px;
+  min-width: 140px;
+  font-size: 0.82rem;
   text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 1px;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
 }
 
 .chart-bar-container {
   flex-grow: 1;
-  height: 8px;
-  background: #111;
-  margin: 10px 20px;
+  height: 4px;
+  background: #1a1a1a;
   overflow: hidden;
-  border-radius: 2px;
 }
 
 .chart-bar {
   height: 100%;
-  background: linear-gradient(90deg, #ddd, #ddd);
-  transition: width 1.2s ease-out;
+  background: #fff;
+  transition: width 1.5s ease-out;
+  min-width: 2px;
 }
+
+.chart-bar.anomaly { background: #e05c4a; }
+.chart-bar.issues   { background: #c0a060; }
 
 .chart-value {
   width: 60px;
   text-align: right;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------
+   FATALITY STATS SECTION
+-------------------------------------- */
+.fatality-stats-section {
+  width: 100%;
+  padding: 100px 6%;
+  background: #050505;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.fatality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.fatality-card {
+  background: #080808;
+  padding: 48px 36px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.fatality-card:hover {
+  background: #0f0f0f;
+}
+
+.fatality-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+}
+
+.accent-red::before   { background: #c0392b; }
+.accent-amber::before { background: #b8860b; }
+.accent-gray::before  { background: #555; }
+
+.fatality-num {
+  display: block;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.fatality-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #777;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.fatality-desc {
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: #999;
+  line-height: 1.75;
+}
+
+/* --------------------------------------
+   TIMELINE SECTION
+-------------------------------------- */
+.timeline-section {
+  width: 100%;
+  padding: 100px 6%;
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 110px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.timeline-item {
+  display: flex;
+  gap: 0;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 110px;
+  flex-shrink: 0;
+  padding-right: 28px;
+  padding-top: 4px;
+  gap: 8px;
+  position: relative;
+}
+
+.tl-date {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.tl-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+  border: 1px solid rgba(255,255,255,0.2);
+  position: absolute;
+  right: -4px;
+  top: 24px;
+  flex-shrink: 0;
+}
+
+.tl-dot--latest {
+  background: #c0392b;
+  border-color: #e05c4a;
+  width: 10px;
+  height: 10px;
+  right: -5px;
+  box-shadow: 0 0 12px rgba(192, 57, 43, 0.5);
+}
+
+.timeline-card {
+  flex: 1;
+  border: 1px solid rgba(255,255,255,0.07);
+  padding: 28px 32px;
+  background: #060606;
+  margin-left: 28px;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.timeline-card:hover {
+  border-color: rgba(255,255,255,0.14);
+  background: #0a0a0a;
+}
+
+.timeline-card--latest {
+  border-color: rgba(192, 57, 43, 0.35);
+  background: rgba(192, 57, 43, 0.04);
+}
+
+.timeline-card--latest:hover {
+  border-color: rgba(192, 57, 43, 0.5);
+}
+
+.tl-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #c0392b;
+  border: 1px solid rgba(192, 57, 43, 0.4);
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.tl-header {
+  margin-bottom: 14px;
+}
+
+.tl-name {
+  display: block;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.tl-unit {
+  display: block;
+  font-size: 0.78rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tl-desc {
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: #999;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.tl-cause {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #777;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 14px;
+  width: 100%;
+}
+
+/* --------------------------------------
+   ANOMALY REPORT SECTIONS — TEXT ONLY
+-------------------------------------- */
+.text-only-report {
+  padding: 100px 6%;
+  background: #050505;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.text-only-report h3 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.report-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.report-id {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   color: #fff;
   font-weight: 600;
 }
 
-/* --------------------------------------
-   INCIDENT REPORT SECTIONS
--------------------------------------- */
+.report-date {
+  font-size: 0.8rem;
+  color: #666;
+  letter-spacing: 0.06em;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 36px;
+}
+
+.report-grid--2col {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.report-block {
+  background: #060606;
+  padding: 32px 28px;
+  transition: background 0.3s;
+}
+
+.report-block:hover {
+  background: #0c0c0c;
+}
+
+.report-block h5 {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #777;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.report-block p {
+  color: #bbb;
+  font-size: clamp(0.88rem, 1.5vw, 0.98rem);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Keep old .anomaly-report-section for compatibility */
 .anomaly-report-section {
   width: 100%;
-  padding: 100px 0;
-  background: #000;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
   scroll-snap-align: start;
 }
 
-.anomaly-report-section h3 {
-  text-align: center;
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 80px;
-  font-weight: 600;
-}
-
-.report-container {
-  display: flex;
-  flex-wrap: wrap;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.report-visual {
-  flex: 1;
-  min-height: 450px;
-  position: relative;
-  overflow: hidden;
-}
-
-.report-visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter:  brightness(70%);
-  transition: transform 0.8s ease;
-}
-
-.report-summary {
-  flex: 1;
-  padding: 80px 8%;
-  background: #0a0a0a;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  animation: slideUp 1.3s ease-out;
-}
-
-.report-summary h4 {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  font-weight: 600;
-}
-
-.report-summary .date {
-  color: #b0b0b0;
-  font-size: 0.9rem;
-}
-
-.log-details p {
-  color: #ddd;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  line-height: 1.7;
-}
-
-/* Button Style (like project.css link hover) */
 .btn-download {
   display: inline-block;
-  margin-top: 25px;
   padding: 12px 28px;
   color: #ddd;
-  border: 2px solid #ddd;
+  border: 1px solid rgba(255,255,255,0.25);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  align-self: flex-start;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   transition: all 0.3s ease;
 }
 
 .btn-download:hover {
-  background: #ddd;
+  background: #fff;
   color: #000;
+  border-color: #fff;
 }
 
 /* --------------------------------------
-   RESPONSIVE OPTIMIZATION
+   FADE IN ANIMATION
+-------------------------------------- */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* --------------------------------------
+   RESPONSIVE — TABLET (max 900px)
 -------------------------------------- */
 @media (max-width: 900px) {
-  .incident-content h2 {
-    font-size: 2.5rem;
-  }
+  .incident-content h2 { font-size: 2.4rem; }
 
-  .incident-content p{
-    font-size: 0.9rem;
-  }
+  .stats-section,
+  .fatality-stats-section,
+  .timeline-section,
+  .text-only-report { padding: 70px 5%; }
 
-  .stats-section {
-    padding: 80px 5%;
-  }
+  .chart-item { flex-wrap: wrap; gap: 10px; }
+  .chart-label { width: 100%; min-width: unset; }
+  .chart-bar-container { flex-grow: 1; }
 
-  .stats-section h3 {
-    font-size: 1.4rem;
-    margin-bottom: 50px;
-  }
+  .timeline::before { left: 80px; }
+  .timeline-marker { width: 80px; }
 
-  .stats-container {
-    justify-content: center;
-    gap: 40px;
+  .report-grid,
+  .report-grid--2col {
+    grid-template-columns: 1fr 1fr;
   }
+}
 
-  .stat-box {
-    flex: 1 1 200px;
-  }
+/* --------------------------------------
+   RESPONSIVE — MOBILE (max 600px)
+-------------------------------------- */
+@media (max-width: 600px) {
+  .text-only-hero { height: 100svh; }
+  .incident-content h2 { font-size: 1.9rem; letter-spacing: 0; }
+  .incident-content p  { font-size: 0.9rem; }
 
-  .stat-number {
-    font-size: 2.5rem;
-  }
-
-  .stat-label {
-    font-size: 0.85rem;
-  }
-
-  .chart-item {
+  .hero-meta {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
   }
+  .hero-meta .dot { display: none; }
 
-  .report-container {
-    flex-direction: column;
-  }
+  .stats-section,
+  .fatality-stats-section,
+  .timeline-section,
+  .text-only-report { padding: 56px 5%; }
 
-  .report-summary {
-    padding: 60px 6%;
-    text-align: center;
-    align-items: center;
-  }
-
-  .btn-download {
-    align-self: center;
-  }
-
-  .report-visual {
-    height: 280px;
-  }
-
-  .system-chart-container {
-    padding: 80px 6%;
-  }
-
-  .chart-item {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .chart-label {
-    flex-basis: 30%;
-    font-size: 0.9rem;
-  }
-
-  .chart-bar-container {
-    flex-grow: 1;
-    height: 8px;
-  }
-
-  .chart-value {
-    font-size: 0.85rem;
-  }
-}
-
-
-
-@media (max-width: 480px) {
-  body {
-    font-size: 0.9rem;
-  }
-
-  .anomaly-report-section {
-  padding: 15px 0;
-}
-
-.anomaly-report-section h3 {
-  font-size: clamp(1.2rem, 0.5vw, 0.8rem);
-  margin-bottom: 30px;
-}
-  .incident-content h2 {
-    font-size: 1.8rem;
-  }
-
-  .stats-section {
-    padding: 10px 1%;
-  }
-
-  .stats-section h3 {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    margin-bottom: 40px;
-  }
+  .section-sub { margin-bottom: 36px; }
 
   .stats-container {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    padding: 20px 0;
+    gap: 28px;
+    padding: 28px 0;
   }
 
-  .stat-box {
-    flex: 1 1 100%;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-  }
-
-  .stat-label {
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-  }
-
-  .btn-download {
-    font-size: 0.8rem;
-    padding: 10px 22px;
-  }
-  .system-chart-container {
-    padding: 10px 5%;
-  }
+  .stat-box { flex: 1 1 100%; }
 
   .chart-item {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 24px;
-    gap: 10px;
   }
 
-  .chart-label {
-    flex-basis: 100%;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 6px;
-  }
+  .chart-label { width: 100%; font-size: 0.8rem; }
 
   .chart-bar-container {
     width: 100%;
-    height: 6px;
-    margin: 6px 0;
+    margin: 4px 0;
   }
 
-  .chart-value {
-    width: auto;
-    text-align: left;
-    font-size: 0.8rem;
-    margin-top: 6px;
-    color: #e0e0e0;
+  .chart-value { text-align: left; }
+
+  .fatality-grid { grid-template-columns: 1fr; }
+
+  .fatality-card { padding: 36px 24px; }
+
+  /* Timeline — mobile stacked */
+  .timeline::before { display: none; }
+
+  .timeline-item { flex-direction: column; gap: 12px; }
+
+  .timeline-marker {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    gap: 12px;
   }
 
-  .chart-bar {
-    height: 100%;
-    border-radius: 3px;
-    background: linear-gradient(90deg, #dcdcdc, #ffffff);
+  .tl-dot {
+    position: static;
+    flex-shrink: 0;
   }
+
+  .timeline-card {
+    margin-left: 0;
+    padding: 22px 20px;
+  }
+
+  .report-meta-row { flex-direction: column; gap: 6px; }
+
+  .report-grid,
+  .report-grid--2col { grid-template-columns: 1fr; }
+
+  .report-block { padding: 24px 20px; }
+
+  .text-only-report h3 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  .btn-download {
+    font-size: 0.75rem;
+    padding: 10px 20px;
+  }
+}
+
+/* --------------------------------------
+   RESPONSIVE — SMALL MOBILE (max 400px)
+-------------------------------------- */
+@media (max-width: 400px) {
+  .incident-content h2 { font-size: 1.55rem; }
+  .fatality-num { font-size: 2rem; }
+  .stat-number  { font-size: 2rem; }
 }

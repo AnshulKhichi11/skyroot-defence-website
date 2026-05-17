@@ -1191,7 +1191,7 @@ body.menu-open {
     }
     
     .nav-menu {
-        position: fixed;
+         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -1200,8 +1200,10 @@ body.menu-open {
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
         display: flex;
+        flex-direction: column;              /* ← stack links + cta vertically */
         align-items: center;
         justify-content: center;
+        gap: 48px;                           /* space between list and cta */
         transform: translateX(-100%);
         transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
@@ -1229,8 +1231,7 @@ body.menu-open {
     
     .nav-cta {
         position: fixed;
-        bottom: 60px;
-        left: 50%;
+        left: 55%;
         transform: translateX(-50%);
         opacity: 0;
         pointer-events: none;

@@ -8,16 +8,14 @@
     <link rel="stylesheet" href="css/incident.css" />
     <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" type="image/png" href="images/logo.png" />
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Oxanium:wght@400;600&family=Rajdhani:wght@500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="navbar">
     <div class="navbar-container">
-        <!-- Logo Section -->
-         <div class="logo">
+        <div class="logo">
            <a href="index.html"><img src="images/logo.png" alt="Kshitej Defence Logo" class="logo-img"></a>
         </div>
-
-        <!-- Navigation Links -->
         <nav class="nav-menu">
             <ul class="nav-list">
                 <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
@@ -28,47 +26,52 @@
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             </ul>
         </nav>
-
-        <!-- CTA Button -->
         <a href="contact.html" class="nav-cta">Contact</a>
-
-        <!-- Mobile Menu Toggle -->
         <button class="menu-toggle" aria-label="Toggle menu">
             <span class="menu-line"></span>
             <span class="menu-line"></span>
             <span class="menu-line"></span>
         </button>
     </div>
-    
-    <!-- Progress Bar (optional) -->
     <div class="nav-progress"></div>
 </header>
 
-<section class="incident-hero">
-  <img src="images/parashute-crash.jpg" alt="Incident Background" class="incident-bg-image">
-  <div class="overlay"></div>
+<!-- ==============================
+     HERO — NO IMAGE, TEXT ONLY
+================================= -->
+<section class="incident-hero text-only-hero">
+  <div class="hero-grid-bg"></div>
   <div class="incident-content">
+    <span class="hero-tag">Operational Intelligence</span>
     <h2>Operational Deviation Summary</h2>
-    <p>
-      This is a secure portal for accessing audited operational and incident data from Kshitej's platforms.
-    </p>
+    <p>Secure portal for audited operational and incident data from Kshitej's platforms.</p>
+    <div class="hero-divider"></div>
+    <div class="hero-meta">
+      <span>Last Updated: April 2025</span>
+      <span class="dot">·</span>
+      <span>Classification: Internal Review</span>
+      <span class="dot">·</span>
+      <span>Status: Active Monitoring</span>
+    </div>
   </div>
 </section>
 
-
+<!-- ==============================
+     GLOBAL + INDIA STATS
+================================= -->
 <section class="stats-section fade-in">
-    <h3>System Reliability Metrics (Last 12 Months)</h3>
+    <div class="section-label">System Reliability Metrics · Last 12 Months</div>
     <div class="stats-container">
         <div class="stat-box">
-            <span class="stat-number">99.98%</span>
+            <span class="stat-number_inci">99.98%</span>
             <p class="stat-label">Parachute Deployment Success Rate</p>
         </div>
         <div class="stat-box">
-            <span class="stat-number">0.02%</span>
+            <span class="stat-number_inci">0.02%</span>
             <p class="stat-label">Anomaly Occurrence Rate</p>
         </div>
         <div class="stat-box">
-            <span class="stat-number">Tier 1</span>
+            <span class="stat-number_inci">Tier 1</span>
             <p class="stat-label">System Integrity Rating</p>
         </div>
     </div>
@@ -84,7 +87,7 @@
         <div class="chart-item">
             <span class="chart-label">Anomaly Rate</span>
             <div class="chart-bar-container">
-                <div class="chart-bar anomaly" style="width: 0.02%;"></div>
+                <div class="chart-bar anomaly" style="width: 2%;"></div>
             </div>
             <span class="chart-value">0.02%</span>
         </div>
@@ -99,177 +102,225 @@
 </section>
 
 <!-- ==============================
-     LATEST INCIDENT REPORT
-=================================-->
-<section class="anomaly-report-section fade-in">
-    <h3>Latest Anomaly: Parachute Jump Incident – Agra Airbase</h3>
-    <div class="report-container">
-        <div class="report-visual">
-            <img src="images\incident.jpg" alt="Agra Parachute Jump Incident">
+     GLOBAL + INDIA FATALITY STATS
+================================= -->
+<section class="fatality-stats-section fade-in">
+    <div class="section-label">Paratrooper Fatality Data · 2018–2025</div>
+    <p class="section-sub">Verified incidents across Indian Armed Forces and global benchmark data compiled from public defence records and aerospace medicine research.</p>
+
+    <div class="fatality-grid">
+        <div class="fatality-card accent-red">
+            <span class="fatality-num">5+</span>
+            <p class="fatality-title">India</p>
+            <p class="fatality-desc">Confirmed paratrooper fatalities during training jumps (2018–2025), across Army, IAF, and Navy MARCOS units.</p>
         </div>
-        <div class="report-summary">
-            <h4>Report ID: ANOM-AF-250405</h4>
-            <p class="date">Date: 2025-04-05 | System: Parachute Demo Drop – IAF Akash Ganga Unit</p>
-            <div class="log-details">
-                <p><strong>Incident Summary:</strong> 
-                    During a scheduled demonstration jump in Agra, a Para Jump Instructor from the IAF’s 
-                    Akash Ganga Skydiving Team sustained critical injuries after a hard landing. Despite 
-                    successful canopy deployment, the instructor succumbed to injuries during medical care.
-                </p>
-                <p><strong>Cause Analysis:</strong> 
-                    Preliminary findings suggest aerodynamic instability induced by crosswind shear 
-                    during descent. The parachute deployed correctly, but control input response was 
-                    delayed due to minor line twist during flare phase.
-                </p>
-                <p><strong>Action Taken:</strong> 
-                    Immediate suspension of all demonstration jumps pending safety audit. 
-                    Wind condition monitoring protocol has been updated to include real-time 
-                    telemetry feedback and auto-abort thresholds for drop-zone gust speeds above 22 knots.
-                </p>
-                <p><strong>Impact:</strong> 
-                    No civilian or equipment loss reported. Internal review committee initiated 
-                    a detailed technical and procedural audit to enhance safety redundancy for future training ops.
-                </p>
-                <a href="#" class="btn-download">Download Full Report (Secure Access)</a>
-            </div>
+        <div class="fatality-card accent-amber">
+            <span class="fatality-num">0.39</span>
+            <p class="fatality-title">Global Avg.</p>
+            <p class="fatality-desc">Deaths per 1,00,000 jumps worldwide. Rate has declined steadily over the past decade due to improved equipment and training protocols.</p>
+        </div>
+        <div class="fatality-card accent-gray">
+            <span class="fatality-num">0.22–0.89%</span>
+            <p class="fatality-title">India Injury Rate</p>
+            <p class="fatality-desc">Per-jump injury incidence at Paratrooper Training School, Agra (PTS data 2013–2019). Majority are landing-posture related and preventable.</p>
         </div>
     </div>
 </section>
 
 <!-- ==============================
-     PREVIOUS INCIDENT REPORT
-=================================-->
-<section class="anomaly-report-section fade-in">
-    <h3>Previous Anomaly: VayuNet Telemetry Failure</h3>
-    <div class="report-container">
-        <div class="report-visual">
-            <img src="images\images.jpg" alt="VayuNet Telemetry Failure Diagram">
-        </div>
-        <div class="report-summary">
-            <h4>Report ID: ANOM-VN-250329</h4>
-            <p class="date">Date: 2025-03-29 | System: VayuNet Module T4</p>
-            <div class="log-details">
-                <p><strong>Incident Summary:</strong> 
-                    During a high-G maneuver simulation, the primary telemetry link experienced signal degradation, 
-                    resulting in a 4.5-second data outage. Backup systems maintained GPS and altitude tracking.
-                </p>
-                <p><strong>Failure Cause Analysis:</strong> 
-                    Root cause traced to a transient 20ms power spike in the RF unit due to an unshielded capacitor 
-                    on the power bus. Confirmed to be a hardware, not software, anomaly.
-                </p>
-                <p><strong>Action Taken:</strong> 
-                    All operational modules received immediate hardware revision (Rev 1.1) with improved shielding 
-                    and power regulation. No mission loss recorded.
-                </p>
-                <a href="#" class="btn-download">Download Full Log Report (Secure)</a>
+     INDIA INCIDENT TIMELINE
+================================= -->
+<section class="timeline-section fade-in">
+    <div class="section-label">Confirmed Fatalities · India Timeline</div>
+    <p class="section-sub">Documented cases of paratrooper deaths during training or demonstration jumps in India over the last five years.</p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span class="tl-date">Mar 2018</span>
+                <div class="tl-dot"></div>
+            </div>
+            <div class="timeline-card">
+                <div class="tl-header">
+                    <span class="tl-name">Lance Naik Sunil Kumar</span>
+                    <span class="tl-unit">1 Para Regiment · Indian Army</span>
+                </div>
+                <p class="tl-desc">Main parachute failed to open during training jump from 6,000 ft over Agra. Fatal ground impact recorded. Jump classified as static-line training operation.</p>
+                <span class="tl-cause">Cause: Parachute non-deployment</span>
             </div>
         </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span class="tl-date">Nov 2018</span>
+                <div class="tl-dot"></div>
+            </div>
+            <div class="timeline-card">
+                <div class="tl-header">
+                    <span class="tl-name">Hardeep Singh</span>
+                    <span class="tl-unit">11 Para SF · Indian Army</span>
+                </div>
+                <p class="tl-desc">Main parachute failed at 9,000 ft over Agra. Reserve parachute became entangled during deployment attempt, preventing successful deceleration. Fatal outcome.</p>
+                <span class="tl-cause">Cause: Reserve chute entanglement</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span class="tl-date">Apr 2023</span>
+                <div class="tl-dot"></div>
+            </div>
+            <div class="timeline-card">
+                <div class="tl-header">
+                    <span class="tl-name">PO Chandaka Govind, 31</span>
+                    <span class="tl-unit">MARCOS · Indian Navy · INS Karna</span>
+                </div>
+                <p class="tl-desc">MARCOS commando died during para-jump training at Panagarh Air Force Station, West Bengal. Found at Barjora, Bankura district. Declared brought dead at hospital. Navy CNS paid formal tribute.</p>
+                <span class="tl-cause">Cause: Under investigation</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <span class="tl-date">Apr 2025</span>
+                <div class="tl-dot tl-dot--latest"></div>
+            </div>
+            <div class="timeline-card timeline-card--latest">
+                <div class="tl-badge">Latest · ANOM-AF-250405</div>
+                <div class="tl-header">
+                    <span class="tl-name">Para Jump Instructor (Name Classified)</span>
+                    <span class="tl-unit">IAF Akash Ganga Skydiving Team · Agra Airbase</span>
+                </div>
+                <p class="tl-desc">Fatal hard landing during scheduled demonstration jump. Canopy deployed correctly, but crosswind shear during descent combined with line twist in flare phase caused delayed control response and high-impact touchdown. Instructor succumbed to injuries during medical care. No civilian or equipment loss reported.</p>
+                <span class="tl-cause">Cause: Crosswind shear + line twist during flare</span>
+            </div>
+        </div>
+
     </div>
 </section>
 
+<!-- ==============================
+     LATEST INCIDENT REPORT
+================================= -->
+<section class="anomaly-report-section fade-in text-only-report">
+    <div class="section-label">Latest Anomaly Report</div>
+    <h3>Parachute Jump Incident – Agra Airbase</h3>
+    <div class="report-summary-full">
+        <div class="report-meta-row">
+            <span class="report-id">Report ID: ANOM-AF-250405</span>
+            <span class="report-date">2025-04-05 · Parachute Demo Drop – IAF Akash Ganga Unit</span>
+        </div>
+        <div class="report-grid">
+            <div class="report-block">
+                <h5>Incident Summary</h5>
+                <p>During a scheduled demonstration jump in Agra, a Para Jump Instructor from the IAF's Akash Ganga Skydiving Team sustained critical injuries after a hard landing. Despite successful canopy deployment, the instructor succumbed to injuries during medical care.</p>
+            </div>
+            <div class="report-block">
+                <h5>Cause Analysis</h5>
+                <p>Preliminary findings suggest aerodynamic instability induced by crosswind shear during descent. The parachute deployed correctly, but control input response was delayed due to minor line twist during flare phase.</p>
+            </div>
+            <div class="report-block">
+                <h5>Action Taken</h5>
+                <p>Immediate suspension of all demonstration jumps pending safety audit. Wind condition monitoring protocol has been updated to include real-time telemetry feedback and auto-abort thresholds for drop-zone gust speeds above 22 knots.</p>
+            </div>
+            <div class="report-block">
+                <h5>Impact Assessment</h5>
+                <p>No civilian or equipment loss reported. Internal review committee initiated a detailed technical and procedural audit to enhance safety redundancy for future training operations.</p>
+            </div>
+        </div>
+        <a href="#" class="btn-download">Download Full Report (Secure Access)</a>
+    </div>
+</section>
 
-    <!-- footer -->
-<!-- ======================================
-   FOOTER COMPONENT
-   Include this file in your HTML pages
-====================================== -->
-<!-- Newsletter Hero Section -->
+<!-- ==============================
+     PREVIOUS INCIDENT REPORT
+================================= -->
+<section class="anomaly-report-section fade-in text-only-report">
+    <div class="section-label">Previous Anomaly Report</div>
+    <h3>VayuNet Telemetry Failure</h3>
+    <div class="report-summary-full">
+        <div class="report-meta-row">
+            <span class="report-id">Report ID: ANOM-VN-250329</span>
+            <span class="report-date">2025-03-29 · VayuNet Module T4</span>
+        </div>
+        <div class="report-grid report-grid--2col">
+            <div class="report-block">
+                <h5>Incident Summary</h5>
+                <p>During a high-G maneuver simulation, the primary telemetry link experienced signal degradation, resulting in a 4.5-second data outage. Backup systems maintained GPS and altitude tracking throughout the event window.</p>
+            </div>
+            <div class="report-block">
+                <h5>Failure Cause Analysis</h5>
+                <p>Root cause traced to a transient 20ms power spike in the RF unit due to an unshielded capacitor on the power bus. Confirmed to be a hardware, not software, anomaly. No data corruption recorded.</p>
+            </div>
+            <div class="report-block">
+                <h5>Action Taken</h5>
+                <p>All operational modules received immediate hardware revision (Rev 1.1) with improved shielding and power regulation. No mission loss recorded. Redundancy protocols validated post-fix.</p>
+            </div>
+        </div>
+        <a href="#" class="btn-download">Download Full Log Report (Secure)</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <section class="newsletter-hero" data-scroll-section style="background-image: url('images/footerbg.jpg');">
     <div class="newsletter-overlay"></div>
     <div class="newsletter-content">
         <h2 class="newsletter-headline">ADVENTURE, TIPS, AND ADRENALINE</h2>
         <h3 class="newsletter-subheadline">SUBSCRIBE TO OUR NEWSLETTER</h3>
-        
         <form class="newsletter-form" action="#" method="post">
             <div class="form-group">
                 <label for="newsletter-email" class="form-label">E-MAIL</label>
-                <input 
-                    id="newsletter-email" 
-                    name="email" 
-                    type="email" 
-                    class="newsletter-input"
-                    placeholder="" 
-                    required
-                >
+                <input id="newsletter-email" name="email" type="email" class="newsletter-input" placeholder="" required>
             </div>
-            
             <div class="form-checkbox">
                 <input type="checkbox" id="privacy-check" required>
-                <label for="privacy-check">
-                    I've read the <a href="privacy.html">data protection policy</a> and accept it.
-                </label>
+                <label for="privacy-check">I've read the <a href="privacy.html">data protection policy</a> and accept it.</label>
             </div>
-            
             <button type="submit" class="newsletter-submit">SUBMIT</button>
-            
-            <p class="privacy-note">
-                By signing up for our newsletter you declare to agree with our <a href="privacy.html">privacy policy</a>.
-            </p>
+            <p class="privacy-note">By signing up for our newsletter you declare to agree with our <a href="privacy.html">privacy policy</a>.</p>
         </form>
     </div>
 </section>
 
-<!-- Footer Section -->
 <footer class="site-footer" data-scroll-section>
     <div class="footer-container">
-        
-        <!-- Footer Top Section -->
         <div class="footer-top">
             <div class="footer-left">
-            
-            <!-- Company Info -->
-            <div class="footer-column footer-about">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="Kshitej Defence Logo">
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Kshitej Defence Logo">
+                    </div>
+                    <p class="footer-tagline">Innovating Indian Aerospace with cutting-edge safety solutions</p>
                 </div>
-                <p class="footer-tagline">
-                    Innovating Indian Aerospace with cutting-edge safety solutions
-                </p>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-column">
-                <h4 class="footer-heading">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="incident.html">Incident</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="platform.html">Platform</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-
-            <!-- Products -->
-            <div class="footer-column">
-                <h4 class="footer-heading">Products</h4>
-                <ul class="footer-links">
-                    <li><a href="#paradigm">ParaDigm AAD</a></li>
-                    <li><a href="#modes">Operating Modes</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#specifications">Specifications</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact -->
-            <div class="footer-column">
-                <h4 class="footer-heading">Get in Touch</h4>
-                <ul class="footer-contact">
-                    <li>
-                        <span class="contact-icon"></span>
-                        <a href="mailto:info@kshitejdefence.com">info@kshitejdefence.com</a>
-                    </li>
-                    <li>
-                        <span class="contact-icon"></span>
-                        <a href="tel:+911234567890">+91 123 456 7890</a>
-                    </li>
-                    <li>
-                        <span class="contact-icon"></span>
-                        <span>India</span>
-                    </li>
-                </ul>
-            </div>
-
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="incident.html">Incident</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="platform.html">Platform</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#paradigm">ParaDigm AAD</a></li>
+                        <li><a href="#modes">Operating Modes</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#specifications">Specifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Get in Touch</h4>
+                    <ul class="footer-contact">
+                        <li><span class="contact-icon"></span><a href="mailto:kshitijdefence@gmail.com">kshitijdefence@gmail.com</a></li>
+                        <li><span class="contact-icon"></span><a href="tel:+911234567890">+91 123 456 7890</a></li>
+                        <li><span class="contact-icon"></span><span>India</span></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-column footer-orbit">
                 <p class="orbit-label">Stay in Our Orbit</p>
@@ -283,44 +334,37 @@
                 <p class="orbit-note">No spam. Unsubscribe anytime.</p>
             </div>
         </div>
-
-        <!-- Footer Bottom Section -->
         <div class="footer-bottom">
-            <div class="footer-copyright">
-                <p>© 2025 Kshitej Defence Systems. All rights reserved.</p>
-            </div>
-            
+            <div class="footer-copyright"><p>© 2025 Kshitiej Tactical Technology Pvt. All rights reserved.</p></div>
             <div class="footer-legal">
                 <a href="privacy.html">Privacy Policy</a>
                 <span class="separator">•</span>
                 <a href="terms.html">Terms of Service</a>
             </div>
-
             <div class="footer-social">
                 <a href="#" aria-label="LinkedIn" class="social-link">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
                 <a href="#" aria-label="Twitter" class="social-link">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
                 </a>
                 <a href="#" aria-label="YouTube" class="social-link">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                 </a>
             </div>
         </div>
-
     </div>
 </footer>
-    
-   
-    <script src="js/footer.js"></script> 
 
+<script src="js/footer.js"></script>
 <script src="js/main.js"></script>
+<script>
+(function () {
+  document.querySelectorAll('.fade-in').forEach(function(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+})();
+</script>
 </body>
 </html>

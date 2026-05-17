@@ -8,213 +8,224 @@
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" type="image/png" href="images/logo.png" />
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Oxanium:wght@400;600&family=Rajdhani:wght@500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="navbar">
     <div class="navbar-container">
-        <!-- Logo Section -->
-         <div class="logo">
+        <div class="logo">
            <a href="index.html"><img src="images/logo.png" alt="Kshitej Defence Logo" class="logo-img"></a>
         </div>
-
-        <!-- Navigation Links -->
         <nav class="nav-menu">
             <ul class="nav-list">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="incident.html" class="nav-link">Incident</a></li>
-                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
                 <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
                 <li class="nav-item"><a href="platform.html" class="nav-link">Platform</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             </ul>
         </nav>
-
-        <!-- CTA Button -->
         <a href="contact.html" class="nav-cta">Contact</a>
-
-        <!-- Mobile Menu Toggle -->
         <button class="menu-toggle" aria-label="Toggle menu">
             <span class="menu-line"></span>
             <span class="menu-line"></span>
             <span class="menu-line"></span>
         </button>
     </div>
-    
-    <!-- Progress Bar (optional) -->
     <div class="nav-progress"></div>
 </header>
 
-    <section class="project-hero">
-        <img src="images/project.webp" alt="Technology Background" class="project-bg-image">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h2>Core Technology Platforms</h2>
-            <p>Our autonomous systems deliver next-generation precision, reliability, and security in contested airspace.</p>
+<!-- HERO -->
+<section class="project-hero">
+    <img src="images/project.webp" alt="Technology Background" class="project-bg-image">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <span class="hero-tag">Core Technology Platform</span>
+        <h2>ParaDigm AAD</h2>
+        <p>Intelligent automatic activation — engineered to save lives where human response cannot.</p>
+    </div>
+</section>
+
+<!-- PRODUCT SECTION -->
+<section class="product-section">
+    <div class="product-layout">
+
+        <!-- LEFT: Image -->
+        <div class="product-image-col">
+            <div class="product-img-wrapper">
+                <!-- Replace src with your actual product image -->
+                <img src="images/product_org.png" alt="Kshitij AAD Device" class="product-img" />
+                <div class="img-status-badge">
+                    <span class="status-dot"></span>
+                    Testing &amp; Development Phase
+                </div>
+            </div>
+            <div class="product-tag-row">
+                <span class="ptag">Make in India</span>
+                <span class="ptag">Defence Grade</span>
+                <span class="ptag">AI-Driven</span>
+            </div>
         </div>
-    </section>
 
-    <main id="project-features" class="scroll-snap-container">
-        <section class="tech-feature fade-in scroll-snap-item">
-            <div class="feature-media">
-                <video autoplay muted loop playsinline class="feature-video">
-                    <source src="videos/NabhAstra.mp4" type="video/mp4"> 
-                </video>
-                <div class="feature-overlay"></div>
-            </div>
-            <div class="feature-content">
-                <span class="tech-tag">Protection System</span>
-                <h3>NabhAstra - Adaptive Payload Recovery</h3>
-                <p>NabhAstra is a mission-critical payload recovery solution featuring an **AI-driven deployment system** that analyzes altitude, velocity, and weather in real-time. It guarantees dual-redundancy activation, ensuring the maximum possible recovery rate for sensitive defense assets even under high-G or extreme weather conditions.</p>
-                <ul>
-                    <li>Dual-Redundancy Automatic Activation</li>
-                    <li>GPS-Guided Trajectory Correction</li>
-                </ul>
-                <a href="#" class="detail-link">View Full Technical Brief →</a>
-            </div>
-        </section>
+        <!-- RIGHT: Detail -->
+        <div class="product-detail-col">
 
-        <section class="tech-feature fade-in reverse scroll-snap-item">
-            <div class="feature-media">
-                <video autoplay muted loop playsinline class="feature-video">
-                    <source src="videos/Drishti.mp4" type="video/mp4"> 
-                </video>
-                <div class="feature-overlay"></div>
+            <div class="detail-eyebrow">
+                <span class="eyebrow-label">Project ParaDigm</span>
+                <span class="eyebrow-status">Under Development</span>
             </div>
-            <div class="feature-content">
-                <span class="tech-tag">Surveillance Platform</span>
-                <h3>Drishti - Autonomous AI Reconnaissance</h3>
-                <p>The Drishti platform provides **zero-latency aerial surveillance**. It leverages proprietary neural networks for real-time object recognition and threat classification, transmitting data over military-grade, encrypted quantum key distribution protocols. Designed for silent, extended endurance missions.</p>
-                <ul>
-                    <li>Proprietary Deep-Learning Algorithms</li>
-                    <li>Encrypted Quantum Key Communication</li>
-                </ul>
-                <a href="#" class="detail-link">Explore Sensor Specifications →</a>
-            </div>
-        </section>
 
-        <section class="tech-feature fade-in scroll-snap-item">
-            <div class="feature-media">
-                <video autoplay muted loop playsinline class="feature-video">
-                    <source src="videos/background.mp4" type="video/mp4"> 
-                </video>
-                <div class="feature-overlay"></div>
+            <h2 class="product-title">Automatic Activation Device</h2>
+            <p class="product-subtitle">A life-saving intelligent system that transforms parachute operations through automation, data intelligence, and affordability.</p>
+
+            <div class="divider-line"></div>
+
+            <!-- What it does -->
+            <div class="detail-block">
+                <h4>What It Does</h4>
+                <p>ParaDigm continuously monitors critical flight parameters in real time — altitude, acceleration, fall speed, and GPS location. When it detects an unsafe condition or deployment failure, it responds instantly: triggering alerts and, in critical scenarios, automatically deploying a reserve parachute at a safe altitude to maximise survival probability.</p>
             </div>
-            <div class="feature-content">
-                <span class="tech-tag">Communication & Data</span>
-                <h3>VayuNet - Real-Time Telemetry</h3>
-                <p>VayuNet is our secure, wireless telemetry system designed for live tracking of critical mission data. It monitors altitude, velocity, environmental data, and system diagnostics with **zero risk of signal interception**.</p>
-                <ul>
-                    <li>Military-Grade, Secure RF Transmission</li>
-                    <li>Altitude & Environmental Data Logging</li>
-                </ul>
-                <a href="#" class="detail-link">View Telemetry Architecture →</a>
+
+            <!-- Problem it solves -->
+            <div class="detail-block">
+                <h4>The Problem It Solves</h4>
+                <p>Parachute fatalities remain a recurring challenge in military training, NCC programs, and adventure aviation. Most accidents stem from delayed response or failure to deploy under stress. ParaDigm removes human reaction time from the equation entirely — providing a reliable, automated last line of defence.</p>
             </div>
-        </section>
-    </main>
-    
-    
-    <!-- footer -->
-<!-- ======================================
-   FOOTER COMPONENT
-   Include this file in your HTML pages
-====================================== -->
-<!-- Newsletter Hero Section -->
+
+            <!-- Status -->
+            <div class="detail-block">
+                <h4>Current Status</h4>
+                <p>The system is currently in active testing and development. Core detection algorithms, real-time telemetry, and emergency deployment logic are under rigorous evaluation. Ground testing is complete; controlled aerial trials are ongoing. Post-jump data logging is being refined for operational analysis.</p>
+            </div>
+
+            
+            <div class="detail-block highlight-block">
+                <h4>Indigenous Innovation</h4>
+                <p>Where existing international AAD systems remain out of reach for most Indian operators, ParaDigm is engineered from the ground up for accessibility — delivering a comparable, and in several parameters enhanced, capability at a fraction of the global benchmark. Aligned with India's defence modernisation and Make in India mandate.</p>
+            </div>
+
+            <!-- Capability list -->
+            <div class="capability-grid">
+                <div class="cap-item">
+                    <span class="cap-icon">◈</span>
+                    <span>Real-time altitude &amp; velocity monitoring</span>
+                </div>
+                <div class="cap-item">
+                    <span class="cap-icon">◈</span>
+                    <span>Automatic reserve deployment at ~300 m</span>
+                </div>
+                <div class="cap-item">
+                    <span class="cap-icon">◈</span>
+                    <span>Live data transmission to ground teams</span>
+                </div>
+                <div class="cap-item">
+                    <span class="cap-icon">◈</span>
+                    <span>Post-jump data logging for review</span>
+                </div>
+                <div class="cap-item">
+                    <span class="cap-icon">◈</span>
+                    <span>Compact, ruggedised for extreme conditions</span>
+                </div>
+                <div class="cap-item">
+                    <span class="cap-icon">◈</span>
+                    <span>GSM / Wi-Fi connectivity for rescue ops</span>
+                </div>
+            </div>
+
+            <div class="detail-actions">
+                <a href="contact.html" class="btn-primary">Request Technical Brief</a>
+                <a href="platform.html" class="btn-ghost">View Platform →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- MARKET CONTEXT STRIP -->
+<!-- <section class="market-strip">
+    <div class="market-inner">
+        <div class="market-item">
+            <span class="market-num">₹5K–7K</span>
+            <p>Target unit cost</p>
+        </div>
+        <div class="market-divider"></div>
+        <div class="market-item">
+            <span class="market-num">~300 m</span>
+            <p>Automatic activation altitude</p>
+        </div>
+        <div class="market-divider"></div>
+        <div class="market-item">
+            <span class="market-num">24×</span>
+            <p>More affordable than comparable international systems</p>
+        </div>
+        <div class="market-divider"></div>
+        <div class="market-item">
+            <span class="market-num">3+</span>
+            <p>Target sectors: defence, NCC, adventure aviation</p>
+        </div>
+    </div>
+</section> -->
+
+<!-- FOOTER -->
 <section class="newsletter-hero" data-scroll-section style="background-image: url('images/footerbg.jpg');">
     <div class="newsletter-overlay"></div>
     <div class="newsletter-content">
         <h2 class="newsletter-headline">ADVENTURE, TIPS, AND ADRENALINE</h2>
         <h3 class="newsletter-subheadline">SUBSCRIBE TO OUR NEWSLETTER</h3>
-        
         <form class="newsletter-form" action="#" method="post">
             <div class="form-group">
                 <label for="newsletter-email" class="form-label">E-MAIL</label>
-                <input 
-                    id="newsletter-email" 
-                    name="email" 
-                    type="email" 
-                    class="newsletter-input"
-                    placeholder="" 
-                    required
-                >
+                <input id="newsletter-email" name="email" type="email" class="newsletter-input" placeholder="" required>
             </div>
-            
             <div class="form-checkbox">
                 <input type="checkbox" id="privacy-check" required>
-                <label for="privacy-check">
-                    I've read the <a href="privacy.html">data protection policy</a> and accept it.
-                </label>
+                <label for="privacy-check">I've read the <a href="privacy.html">data protection policy</a> and accept it.</label>
             </div>
-            
             <button type="submit" class="newsletter-submit">SUBMIT</button>
-            
-            <p class="privacy-note">
-                By signing up for our newsletter you declare to agree with our <a href="privacy.html">privacy policy</a>.
-            </p>
+            <p class="privacy-note">By signing up for our newsletter you declare to agree with our <a href="privacy.html">privacy policy</a>.</p>
         </form>
     </div>
 </section>
 
-<!-- Footer Section -->
 <footer class="site-footer" data-scroll-section>
     <div class="footer-container">
-        
-        <!-- Footer Top Section -->
         <div class="footer-top">
             <div class="footer-left">
-            
-            <!-- Company Info -->
-            <div class="footer-column footer-about">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="Kshitej Defence Logo">
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Kshitej Defence Logo">
+                    </div>
+                    <p class="footer-tagline">Innovating Indian Aerospace with cutting-edge safety solutions</p>
                 </div>
-                <p class="footer-tagline">
-                    Innovating Indian Aerospace with cutting-edge safety solutions
-                </p>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-column">
-                <h4 class="footer-heading">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="incident.html">Incident</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="platform.html">Platform</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-
-            <!-- Products -->
-            <div class="footer-column">
-                <h4 class="footer-heading">Products</h4>
-                <ul class="footer-links">
-                    <li><a href="#paradigm">ParaDigm AAD</a></li>
-                    <li><a href="#modes">Operating Modes</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#specifications">Specifications</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact -->
-            <div class="footer-column">
-                <h4 class="footer-heading">Get in Touch</h4>
-                <ul class="footer-contact">
-                    <li>
-                        <span class="contact-icon"></span>
-                        <a href="mailto:info@kshitejdefence.com">info@kshitejdefence.com</a>
-                    </li>
-                    <li>
-                        <span class="contact-icon"></span>
-                        <a href="tel:+911234567890">+91 123 456 7890</a>
-                    </li>
-                    <li>
-                        <span class="contact-icon"></span>
-                        <span>India</span>
-                    </li>
-                </ul>
-            </div>
-
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="incident.html">Incident</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="platform.html">Platform</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#paradigm">ParaDigm AAD</a></li>
+                        <li><a href="#modes">Operating Modes</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#specifications">Specifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Get in Touch</h4>
+                    <ul class="footer-contact">
+                        <li><span class="contact-icon"></span><a href="mailto:kshitijdefence@gmail.com">kshitijdefence@gmail.com</a></li>
+                        <li><span class="contact-icon"></span><a href="tel:+911234567890">+91 123 456 7890</a></li>
+                        <li><span class="contact-icon"></span><span>India</span></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-column footer-orbit">
                 <p class="orbit-label">Stay in Our Orbit</p>
@@ -228,44 +239,29 @@
                 <p class="orbit-note">No spam. Unsubscribe anytime.</p>
             </div>
         </div>
-
-        <!-- Footer Bottom Section -->
         <div class="footer-bottom">
-            <div class="footer-copyright">
-                <p>© 2025 Kshitej Defence Systems. All rights reserved.</p>
-            </div>
-            
+            <div class="footer-copyright"><p>© 2025 Kshitiej Tactical Technology Pvt. All rights reserved.</p></div>
             <div class="footer-legal">
                 <a href="privacy.html">Privacy Policy</a>
                 <span class="separator">•</span>
                 <a href="terms.html">Terms of Service</a>
             </div>
-
             <div class="footer-social">
                 <a href="#" aria-label="LinkedIn" class="social-link">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
                 <a href="#" aria-label="Twitter" class="social-link">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
                 </a>
                 <a href="#" aria-label="YouTube" class="social-link">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
-                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                 </a>
             </div>
         </div>
-
     </div>
 </footer>
-    
-   
-    <script src="js/footer.js"></script> 
 
-    <script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
